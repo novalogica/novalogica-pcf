@@ -1,4 +1,4 @@
-# ´novalogica PCF Boilerplate
+# novalogica PCF Boilerplate
 
 A CLI tool to generate a new **PowerApps Component Framework (PCF)** project from a base template with customizable options.
 
