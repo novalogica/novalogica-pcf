@@ -108,7 +108,7 @@ program
 
     console.log(chalk.yellow("📦 Installing dependencies..."));
     execSync("npm install", { cwd: newProjectPath, stdio: "inherit" });
-
+    execSync("npm run refreshTypes", { cwd: newProjectPath, stdio: "inherit" });
     console.log(chalk.green("PCF Project created successfully!"));
   });
 
