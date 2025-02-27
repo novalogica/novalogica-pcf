@@ -2,9 +2,6 @@
   "name": "pcf-project",
   "version": "1.0.0",
   "description": "Project containing your PowerApps Component Framework (PCF) control.",
-  "bin": {
-    "pcf-boilerplate": "bin/index.js"
-  },
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
