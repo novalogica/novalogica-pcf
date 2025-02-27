@@ -15,7 +15,7 @@ export const App = ({context}: IProps) => {
     <FluentProvider theme={webLightTheme}>
       <PCFContext.Provider value={{ context }}>
         <div>
-            <ExampleComponent />
+          <ExampleComponent />
         </div>
       </PCFContext.Provider>
     </FluentProvider>
