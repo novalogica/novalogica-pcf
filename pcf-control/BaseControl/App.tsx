@@ -14,18 +14,10 @@ export const App = ({context}: IProps) => {
   return ( 
     <FluentProvider theme={webLightTheme}>
       <PCFContext.Provider value={{ context }}>
-        <div style={styles.main}>
+        <div>
             <ExampleComponent />
         </div>
       </PCFContext.Provider>
     </FluentProvider>
   );
-}
-
-const styles: Record<string, React.CSSProperties> = {
-  main: {
-    width: '100%', 
-    height: '100vh',
-    backgroundColor: '#f0f0f0'
-  }
 }
