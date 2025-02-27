@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control 
+    namespace="novalogica" 
+    constructor="BaseControl" 
+    version="0.0.1" 
+    display-name-key="BaseControl" 
+    description-key="" 
+    control-type="virtual"
+  >
+    <property 
+      name="sampleProperty" 
+      display-name-key="Sample Property" 
+      of-type="SingleLine.Text" 
+      usage="input" 
+      required="false"
+    />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="styles.css" order="1" />
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.46.2" />
+      <resx path="strings/BaseControl.1033.resx" version="1.0.0" />
+    </resources>
+    <feature-usage>
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
