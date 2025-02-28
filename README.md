@@ -42,6 +42,7 @@ npx novalogica-pcf <component-name> [options]
 
 | Option             | Alias | Description                                          | Default     |
 |--------------------|-------|------------------------------------------------------|-------------|
+| `-n, --namespace`  |       | Control namespace                                  | `novalogica`     |
 | `-c, --control`   |       | Control class name                                  | `BaseControl` |
 | `-t, --type`      |       | Component type (`field` or `dataset`)               | `field`     |
 
