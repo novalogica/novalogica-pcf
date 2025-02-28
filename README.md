@@ -1,7 +1,7 @@
 [![NPM Version](https://img.shields.io/npm/v/novalogica-pcf-control?style=flat&color=%2371c1bb)](https://www.npmjs.com/package/novalogica-pcf-control)
 
 
-# novalogica PCF Boilerplate
+# novalogica PCF Starter
 
 A CLI tool to generate a new **PowerApps Component Framework (PCF)** project from a base template with customizable options.
 
