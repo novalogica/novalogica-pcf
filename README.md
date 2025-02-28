@@ -46,12 +46,6 @@ npx novalogica-pcf <component-name> [options]
 | `-c, --control`   |       | Control class name                                  | `BaseControl` |
 | `-t, --type`      |       | Component type (`field` or `dataset`)               | `field`     |
 
-### Example
-
-```sh
-npx novalogica-pcf MyCustomControl -c MyControl -t dataset
-```
-
 This will:
 - Create a new PCF control in the `MyCustomControl` folder
 - Rename the base control to `MyControl`
