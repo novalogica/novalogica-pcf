@@ -10,11 +10,12 @@ const chalk = require("chalk");
 const baseTemplatePath = path.join(__dirname, "..", "pcf-control");
 
 program
-  .argument("<appName>", "Name of the PCF component folder")
-  .option("-c, --control <controlName>", "Control class name", "FieldControl")
+  .argument("<folderName>", "PCF component folder name")
+  .option("-c, --control <controlName>", "Control constructor name", "FieldControl")
+  .option("-n, --namespace <namespace>", "Control namespace", "novalogica")
   .option("-t, --type <type>", "Component type (field or dataset)", "field")
-  .action((appName, options) => {
-    const { control, type } = options;
+  .action((folderName, options) => {
+    const { control, type, namespace } = options;
 
     if(!control) {
       console.error(chalk.red(`❌ Please provide a control constructor name. Use "-c".`));
@@ -26,14 +27,14 @@ program
       process.exit(1);
     }
 
-    const newProjectPath = path.join(process.cwd(), appName);
+    const newProjectPath = path.join(process.cwd(), folderName);
 
     if (!["field", "dataset"].includes(type.toLowerCase())) {
       console.error(chalk.red(`❌ Invalid type: ${type}. Use "field" or "dataset".`));
       process.exit(1);
     }
 
-    console.log(chalk.blue(`📁 Creating PCF project: ${appName} (Type: ${type}, Control: ${control})...`));
+    console.log(chalk.blue(`📁 Creating PCF project: ${folderName} (Type: ${type}, Control: ${control})...`));
 
     try {
       fs.copySync(baseTemplatePath, newProjectPath, { overwrite: true });
@@ -49,6 +50,7 @@ program
     const manifestPath = path.join(newControlPath, "ControlManifest.Input.xml");
     let manifestContent = fs.readFileSync(manifestPath, "utf8");
 
+    manifestContent = manifestContent.replace(/namespace=".*?"/, `namespace="${namespace}"`);
     manifestContent = manifestContent.replace(/constructor=".*?"/, `constructor="${control}"`);
     manifestContent = manifestContent.replace(/display-name-key=".*?"/, `display-name-key="${control}"`);
 
