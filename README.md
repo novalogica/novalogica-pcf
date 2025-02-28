@@ -17,7 +17,7 @@ A CLI tool to generate a new **PowerApps Component Framework (PCF)** project fro
 You can use the generator without installing globally:
 
 ```sh
-npx novalogica-pcf my-pcf-component -c ControlName -t field
+npx novalogica-pcf my-pcf-component -n novalogica -c ControlName -t field
 ```
 
 Or install globally:
@@ -29,7 +29,7 @@ npm install -g novalogica-pcf
 Then run:
 
 ```sh
-novalogica-pcf my-pcf-component -c ControlName -t dataset
+novalogica-pcf my-pcf-component -n novalogica -c ControlName -t dataset
 ```
 
 ## Usage
