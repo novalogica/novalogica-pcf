@@ -3,14 +3,14 @@ import { memo, useContext } from "react";
 import { PCFContext } from "../context/pcf-context";
 
 const ExampleComponent = memo(() => {
-    const { context } = useContext(PCFContext);
+    const { data, context } = useContext(PCFContext);
 
     return (
         <>
-            {context.parameters.sampleProperty.raw}
+            <p>Data: {data}</p>
         </>
     );
 })
- 
+
 ExampleComponent.displayName = "ExampleComponent";
 export default ExampleComponent;

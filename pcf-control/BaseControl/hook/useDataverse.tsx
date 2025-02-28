@@ -5,6 +5,8 @@ import { XrmService } from "./service";
 export const useDataverse = (context: ComponentFramework.Context<IInputs>) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>(null);
+  //Properly define data interface
+  const [data, setData] = useState<string>("")
 
   const xrmService = useMemo(() => {
     const service = XrmService.getInstance();
@@ -13,14 +15,13 @@ export const useDataverse = (context: ComponentFramework.Context<IInputs>) => {
   }, [context]);
 
   useEffect(() => {
-   
-
     loadData();
   }, []);
 
   const loadData = async () => {
     try {
       //Retrieve data here
+      setData("It works!")
     } catch (e) {
       setError(e);
     } finally {
@@ -43,5 +44,6 @@ export const useDataverse = (context: ComponentFramework.Context<IInputs>) => {
   return {
     isLoading,
     error,
+    data
   };
 };
