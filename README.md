@@ -29,7 +29,7 @@ npm install -g novalogica-pcf-control
 Then run:
 
 ```sh
-novalogica-pcf-control my-pcf-component -n novalogica -c ControlName -t dataset
+novalogica-pcf my-pcf-component -n novalogica -c ControlName -t dataset
 ```
 
 ## Usage
