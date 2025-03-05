@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "novalogica-pcf": "bin/index.js"
+    "novalogica-pcf-control": "bin/index.js"
   },
   "preferGlobal": true,
   "scripts": {
